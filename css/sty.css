@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color1: #3498DB;
+    --color2: #FFFFFF;
+    --color3: #2C3E50;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    font-family: 'Roboto', serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    margin-top: 100px;
+}
+.form{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px var(--color3) inset;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.form form{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form .logo{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin: 15px;
+    background-color: var(--color3);
+}
+
+.form .logo img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+.form p{
+    color: red; 
+    text-align: center; 
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.form form input{
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px var(--color3);
+    margin: 10px;
+    outline: none;
+}
+
+.form form #input-login{
+    width: 50%;
+    height: 50px;
+    background-color: var(--color3);
+    color: var(--color2);
+    transition: ease-in-out 0.5s;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form form #input-login:hover{
+    border-radius: 50px;
+    background-color: var(--color2);
+    color: var(--color3);
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.form form .input{
+    width: 100%;
+}
+
+.form form .input input{
+    position: relative;
+    padding:10px; 
+    padding-bottom: 0 !important;
+}
+.form form .input span{
+    position: absolute;
+    z-index: 9999;
+    margin: 15px 10px 10px 20px;
+    color: var(--color3);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*Inicio da estilização do sistema*/
+
+.menu {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo {
+    display: flex;
+    align-items: center;
+    color: var(--color3);
+}
+
+.menu .logo img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-left: -200px;
+}
+
+.menu ul .links {
+    position: relative;
+    margin: 10px;
+}
+
+.menu ul .links a {
+    text-decoration: none;
+    color: var(--color3);
+    padding: 10px 15px;
+}
+
+/* Estilizando o dropdown */
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 200px;
+    min-width: 250px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 5px 0;
+    margin-top: 10px;
+    background-color: #ECF0F1;
+}
+
+#dropdown-menu li {
+    width: 100%;
+}
+
+#dropdown-menu li a {
+    display: block;  /* Faz o link ocupar todo o espaço do <li> */
+    padding: 10px 15px;
+    color: var(--color3);
+    transition: background 0.3s;
+}
+
+#dropdown-menu li a:hover {
+    background: var(--color3);
+    color: #FFF;
+}
+
+i.fa-caret-down, i.fa-caret-up {
+    transition: transform 5s all; /* Apenas a troca do ícone terá a transição */
+}
+
+
+#btn-logoff{
+    margin-right: 100px;
+    cursor: pointer;
+}
+/* Mostrar o dropdown ao passar o mouse
+#dropdown:hover #dropdown-menu {
+    display: block;
+} */
+
+.user{
+    display: flex;
+    position: relative;
+}
+
+.photoUser img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color3) !important;
+}
+
+.phUser{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#dropdown-user {
+    display: none;
+    position: absolute;
+    top: 100%;
+    min-width: 250px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 5px 0;
+    margin-top: 10px;
+    background-color: #ECF0F1;
+}
+
+#dropdown-user li {
+    width: 100%;
+}
+
+#dropdown-user li a {
+    display: block;  /* Faz o link ocupar todo o espaço do <li> */
+    padding: 10px 15px;
+    color: var(--color3);
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+#dropdown-user li a:hover {
+    background: var(--color3);
+    color: #FFF;
+}
+
+#dataUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#dataUser img{
+    margin-bottom: 10px;
+}
+
+.off{
+    color: red !important;
+}
+
+.off:hover{
+    color: white !important;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+}
+
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.home .centralLogo{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.centralLogo img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.disciplinas, .turmas, .professores, .filiais, .usuarios{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.disciplinas .menu_home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.turmas .menu_home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.professores .menu_home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filiais .menu_home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usuarios .menu_home{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_home .voltar{
+    margin-left: 70px;
+    color: var(--color3);
+}
+
+.btn-cadastrar{
+    width: max-content;
+    height: 40px;
+    background-color: var(--color3);
+    padding: 10px;
+    color: var(--color2);
+    border-radius: 10px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.table{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table table{
+    width: 80%;
+    height: 100%;
+    margin-top: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    border: none;
+    box-shadow: 0px 1px 1px var(--color3);
+}
+
+.table table thead{
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+
+.table th, 
+.table td {
+    border: 2px solid var(--color3);
+    padding: 5px;
+}
+
+.table thead tr:first-child th {
+    border-top: none;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr td:first-child, 
+.table tr th:first-child {
+    border-left: none;
+}
+
+.table tr td:last-child, 
+.table tr th:last-child {
+    border-right: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.form-default{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-default input, select{
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    margin: 10px;
+    outline: none;
+    padding: 10px;
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+}
+
+.form-default #submit{
+    background-color: var(--color3);
+    color: var(--color2);
+    cursor: pointer;
+}
+
+#submit{
+    width: 200px;
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+    background-color: var(--color3);
+    color: var(--color2);
+    cursor: pointer;
+}
+
+.div-options{
+    margin: 10px;
+}
+
+.options{
+    width: max-content;
+    height: max-content;
+    background-color: var(--color3);
+    color: var(--color2);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+.planos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card-plano{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-plano ul{
+    list-style: none;
+    padding: 20px;
+}
+
+.btn-assinar{
+    width: max-content;
+    height: max-content;
+    background-color: var(--color3);
+    color: var(--color2);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-style: none;
+    font-family: 'Roboto', sans;
+    font-size: 18px;
+}
+
+
+.disponibilidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tabelaCadas{
+    width: 50%;
+    height: 100%;
+    background-color: var(--color2);
+    border: 2px solid var(--color3);
+    border-collapse: collapse;
+}
+
+.tabelaCadas tr td{
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--color3);
+    text-align: center;
+    padding: 10px;
+}
+
+.tabelaCadas tr th{
+    padding: 10px;
+    border: 1px solid var(--color2);
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.tabelaCadas input[type="checkbox"]{
+    width: 100%;
+    height: 100%;
+    accent-color: var(--color3);
+    border: none;
+    outline: none
+}
+
+#salvarDisponibilidade{
+    width: 100%;
+    height: 50px;
+    color: var(--color2);
+    background-color: var(--color3);
+    font-family: 'Roboto', sans;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.diff{
+    font-size: 30px;
+}
+
+.fa-circle-check{
+    color: green !important;
+}
+
+.fa-circle-xmark{
+    color: var(--color3) !important;
+}
+/*Inicio da estilização mobile*/
+
+@media screen and (max-width: 968px) {
+    .form {
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+}
